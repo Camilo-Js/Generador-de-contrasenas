@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Generador de Contraseñas</h2>
+        
+        <!-- Input para mostrar la contraseña generada -->
+        <input type="text" id="passwordDisplay" placeholder="Aquí aparecera tu contraseña" readonly>
+
+        <br>
+        <br>
+
+        <!-- Controles para seleccionar opciones -->
+        <div class="options">
+            <label for="length"><span> Ingrese el tamaño que deseas para tu contraseña: </span></label>
+            <input type="number" id="length" min="4" max="20" value="12">
+        </div>
+
+        <div class="checkbox-container">
+            <label><input type="checkbox" id="includeUppercase"> Mayúsculas</label>
+            <label><input type="checkbox" id="includeLowercase"> Minúsculas</label>
+            <label><input type="checkbox" id="includeNumbers"> Números</label>
+            <label><input type="checkbox" id="includeSymbols"> Símbolos</label>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="buttons-container">
+            <button id="generateBtn">Generar</button>
+            <button id="saveBtn">Guardar</button>
+        </div>
+
+        <!-- Contenedor de contraseñas guardadas -->
+        <h3>Contraseñas Guardadas</h3>
+        <ul id="savedPasswords"></ul>
+        
+        <!-- Botón para borrar todo -->
+        <button id="clearAllBtn" class="delete-btn">Borrar Todo</button>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
